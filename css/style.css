@@ -180,6 +180,9 @@ footer {
 DESKTOP
 =========*/
 @media only screen and (min-width: 750px) {
+  .container header img {
+    width: 90px;
+  }
   .container header h1 {
     font-size: 3rem;
   }
