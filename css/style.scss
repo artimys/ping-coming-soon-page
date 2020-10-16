@@ -71,7 +71,6 @@ LAYOUT
 
             .input-group {
                 margin-bottom: 0.6em;
-
                 input {
                     width: 90%;
                     border-radius: 50px;
@@ -91,6 +90,28 @@ LAYOUT
                     box-shadow: 0 9px 15px $pale-blue;
                     color: white;
                     font-weight: 400;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: lighten($blue, 5%);
+                    }
+                }
+
+                i {
+                    display: none;
+                    margin: 0.7em 0 2.6em;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    color: $light-red;
+                }
+
+                &.error {
+                    input[type="email"] {
+                        border-color: $light-red;
+                    }
+                    i{
+                        display: block;
+                    }
                 }
             }
         }
@@ -103,24 +124,28 @@ LAYOUT
         }
 
         .social {
-            ul {
-                list-style: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                column-gap: 0.7em;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.7em;
 
-                li {
-                    $circle-size: 35px;
-                    width: $circle-size;
-                    height: $circle-size;
-                    border: 1px solid $pale-blue;
-                    border-radius: 50%;
-                    color: $blue;
-                    font-size: 1rem;
+            a {
+                $circle-size: 35px;
+                width: $circle-size;
+                height: $circle-size;
+                border: 1px solid $pale-blue;
+                border-radius: 50%;
+                color: $blue;
+                font-size: 1rem;
 
-                    display: grid;
-                    place-items: center;
+                display: grid;
+                place-items: center;
+
+                text-decoration: none;
+                &:hover {
+                    background-color: lighten($blue, 5%);
+                    color: white;
                 }
             }
         }
@@ -161,21 +186,33 @@ DESKTOP
             form {
                 margin-bottom: 3em;
 
-                .input-group {
-                    input[type="email"] {
-                        float: left;
-                        width: 67%;
+                display: flex;
+                flex-direction: row;
+                column-gap: 1em;
+
+                .input-group:first-child {
+                    width: 70%;
+                    text-align: left;
+                    i {
+                        margin-bottom: 0;
+                        padding-left: 2.6em;
                     }
-                    input[type="submit"] {
-                        float: right;
-                        width: 30%;
+                }
+                .input-group:last-child {
+                    width: 30%;
+                }
+
+                .input-group {
+                    input {
+                        // Reset mobile width
+                        width: 100%;
                     }
                 }
 
             }
 
             .dashboard {
-                margin: 4em 0 4em;
+                margin: 4em 0;
             }
 
             .copyright {

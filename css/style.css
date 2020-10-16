@@ -102,6 +102,27 @@ LAYOUT
           box-shadow: 0 9px 15px #c2d3ff;
   color: white;
   font-weight: 400;
+  cursor: pointer;
+}
+
+.container main form .input-group input[type="submit"]:hover {
+  background-color: #668ff4;
+}
+
+.container main form .input-group i {
+  display: none;
+  margin: 0.7em 0 2.6em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ff5263;
+}
+
+.container main form .input-group.error input[type="email"] {
+  border-color: #ff5263;
+}
+
+.container main form .input-group.error i {
+  display: block;
 }
 
 .container main .dashboard {
@@ -112,7 +133,7 @@ LAYOUT
   width: 100%;
 }
 
-.container main .social ul {
+.container main .social {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,7 +148,7 @@ LAYOUT
           column-gap: 0.7em;
 }
 
-.container main .social ul li {
+.container main .social a {
   width: 35px;
   height: 35px;
   border: 1px solid #c2d3ff;
@@ -137,6 +158,12 @@ LAYOUT
   display: -ms-grid;
   display: grid;
   place-items: center;
+  text-decoration: none;
+}
+
+.container main .social a:hover {
+  background-color: #668ff4;
+  color: white;
 }
 
 .container main .copyright {
@@ -161,17 +188,32 @@ DESKTOP
   }
   .container main form {
     margin-bottom: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
   }
-  .container main form .input-group input[type="email"] {
-    float: left;
-    width: 67%;
+  .container main form .input-group:first-child {
+    width: 70%;
+    text-align: left;
   }
-  .container main form .input-group input[type="submit"] {
-    float: right;
+  .container main form .input-group:first-child i {
+    margin-bottom: 0;
+    padding-left: 2.6em;
+  }
+  .container main form .input-group:last-child {
     width: 30%;
   }
+  .container main form .input-group input {
+    width: 100%;
+  }
   .container main .dashboard {
-    margin: 4em 0 4em;
+    margin: 4em 0;
   }
   .container main .copyright {
     font-size: 0.9rem;
