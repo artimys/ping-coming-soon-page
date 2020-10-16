@@ -34,7 +34,7 @@ LAYOUT
 =========*/
 .container {
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ LAYOUT
   width: 90%;
   border-radius: 50px;
   border: 1px solid #c2d3ff;
-  padding: 1em 2.4em;
+  padding: 1.1em 2.4em;
   font-size: 1rem;
   color: #151f29;
 }
@@ -179,7 +179,7 @@ footer {
 /*==========
 DESKTOP
 =========*/
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 650px) {
   .container header img {
     width: 90px;
   }
