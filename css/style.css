@@ -26,7 +26,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 5em 1.5em;
+  margin: 5em 1.5em 1em;
 }
 
 /*==========
@@ -152,4 +152,29 @@ footer {
 /*==========
 DESKTOP
 =========*/
+@media only screen and (min-width: 750px) {
+  .container header h1 {
+    font-size: 3rem;
+  }
+  .container main .subscribe {
+    font-size: 1.2rem;
+  }
+  .container main form {
+    margin-bottom: 3em;
+  }
+  .container main form .input-group input[type="email"] {
+    float: left;
+    width: 67%;
+  }
+  .container main form .input-group input[type="submit"] {
+    float: right;
+    width: 30%;
+  }
+  .container main .dashboard {
+    margin: 4em 0 4em;
+  }
+  .container main .copyright {
+    font-size: 0.9rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

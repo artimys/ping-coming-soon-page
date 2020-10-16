@@ -28,7 +28,7 @@ body {
     align-items: center;
     flex-direction: column;
 
-    margin: 5em 1.5em;
+    margin: 5em 1.5em 1em;
 }
 
 
@@ -38,7 +38,6 @@ LAYOUT
 =========*/
 
 .container {
-    // background-color: pink;
     width: 100%;
     max-width: 700px;
     text-align: center;
@@ -60,7 +59,6 @@ LAYOUT
                 color: $very-dark-blue;
             }
         }
-
     }
 
     main {
@@ -95,7 +93,6 @@ LAYOUT
                     font-weight: 400;
                 }
             }
-
         }
 
         .dashboard {
@@ -148,5 +145,44 @@ DESKTOP
 =========*/
 
 @media only screen and (min-width: 750px) {
+
+    .container {
+        header {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        main {
+            .subscribe {
+                font-size: 1.2rem;
+            }
+
+            form {
+                margin-bottom: 3em;
+
+                .input-group {
+                    input[type="email"] {
+                        float: left;
+                        width: 67%;
+                    }
+                    input[type="submit"] {
+                        float: right;
+                        width: 30%;
+                    }
+                }
+
+            }
+
+            .dashboard {
+                margin: 4em 0 4em;
+            }
+
+            .copyright {
+                font-size: 0.9rem;
+            }
+
+        }
+    }
 
 }
