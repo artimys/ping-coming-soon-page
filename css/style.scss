@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+// Primary colors
+$blue: hsl(223, 87%, 63%);
+// Secondary
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+// Neutral color;
+$gray: hsl(0, 0%, 59%);
+$very-dark-blue: hsl(209, 33%, 12%);
+
+/*==========
+DEFAULTS
+=========*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 5em 1.5em;
+}
+
+
+
+/*==========
+LAYOUT
+=========*/
+
+.container {
+    // background-color: pink;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+
+    header {
+        margin-bottom: 1em;
+
+        img {
+            width: 70px;
+            margin-bottom: 2em;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: $gray;
+
+            span {
+                font-weight: 700;
+                color: $very-dark-blue;
+            }
+        }
+
+    }
+
+    main {
+        .subscribe {
+            font-size: 0.9rem;
+        }
+
+        form {
+            margin-top: 2em;
+
+            .input-group {
+                margin-bottom: 0.6em;
+
+                input {
+                    width: 90%;
+                    border-radius: 50px;
+                    border: 1px solid $pale-blue;
+                    padding: 1em 2.4em;
+                    font-size: 1rem;
+                    color: $very-dark-blue;
+                }
+                input[type="email"] {
+                    &::placeholder {
+                        color: $pale-blue;
+                    }
+                }
+                input[type="submit"] {
+                    background-color: $blue;
+                    border: 0;
+                    box-shadow: 0 9px 15px $pale-blue;
+                    color: white;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        .dashboard {
+            margin: 5em 0 7em;
+            img {
+                width: 100%;
+            }
+        }
+
+        .social {
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 0.7em;
+
+                li {
+                    $circle-size: 35px;
+                    width: $circle-size;
+                    height: $circle-size;
+                    border: 1px solid $pale-blue;
+                    border-radius: 50%;
+                    color: $blue;
+                    font-size: 1rem;
+
+                    display: grid;
+                    place-items: center;
+                }
+            }
+        }
+
+        .copyright {
+            margin: 2.6em 0;
+            font-size: 0.7rem;
+            color: $gray;
+        }
+    }
+}
+
+footer {
+    display: none;
+}
+
+
+
+
+/*==========
+DESKTOP
+=========*/
+
+@media only screen and (min-width: 750px) {
+
+}
